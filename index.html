@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <audio autoplay>
+        <source src="sza.mp3" type="audio/mpeg">
+    </audio>
+    
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+        </nav>
+        <div class="image">
+            <img src="images/selfone.jpg" class="self" >
+        </div>
+        <div class="header-text">
+            <p>My Personal Website</p>
+            <h1>Hi, I'm <span>Sofiea</span><br>Khairi</h1>
+            <br>
+            <button class="instagram-button" onclick="window.location.href='https://www.instagram.com/sofieakhairy'">My Instagram</button>
+        </div>
+    </div>
+</div>
+<!-- Background music with a play button for user interaction -->
+<button id="playButton">Play Background Music</button>
+<audio id="backgroundMusic" loop>
+    <source src="audio/sza.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audio = document.getElementById('backgroundMusic');
+        audio.play();
+        this.style.display = 'none'; // Hide the play button after the music starts
+    });
+</script>
+</body>
+</html>
